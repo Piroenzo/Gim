@@ -14,14 +14,14 @@ app = FastAPI(
     version="1.0.0"
 )
 
-        # Configurar CORS
-        app.add_middleware(
-            CORSMiddleware,
-            allow_origins=["http://localhost:3000", "https://gymfit-frontend.onrender.com"],
-            allow_credentials=True,
-            allow_methods=["*"],
-            allow_headers=["*"],
-        )
+# Configurar CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000", "https://gymfit-frontend.onrender.com"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Montar archivos estáticos
 app.mount("/static", StaticFiles(directory="static"), name="static")
