@@ -1,0 +1,113 @@
+.App {
+  text-align: left;
+  min-height: 100vh;
+}
+
+/* Estilos para el scroll suave */
+.App section {
+  scroll-margin-top: 80px;
+}
+
+/* Estilos para el loader */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: var(--light-text);
+}
+
+/* Estilos para mensajes de error */
+.error {
+  background-color: #fee;
+  color: #c33;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  border: 1px solid #fcc;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Estilos para mensajes de éxito */
+.success {
+  background-color: #efe;
+  color: #363;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  border: 1px solid #cfc;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Estilos para el scroll to top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top:hover {
+  background-color: #e55a2b;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Estilos para animaciones de entrada */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilos para el modo oscuro (opcional) */
+@media (prefers-color-scheme: dark) {
+  .App {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+}
+
+/* Estilos para dispositivos de alta resolución */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .App {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Estilos para impresión */
+@media print {
+  .App {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .scroll-to-top,
+  .btn {
+    display: none !important;
+  }
+}
