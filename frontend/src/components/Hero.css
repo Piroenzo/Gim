@@ -8,7 +8,7 @@
   color: white;
   overflow: hidden;
   padding-top: 80px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
 }
 
 .hero-background {
