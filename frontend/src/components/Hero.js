@@ -38,10 +38,15 @@ const Hero = ({ quote }) => {
                         Comenzar Ahora
                       </button>
               
-              <button className="btn btn-secondary btn-large">
+              <a 
+                href="https://tu-link-aqui.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn btn-secondary btn-large"
+              >
                 <FaPlay className="play-icon" />
-                Ver Video<a href="https://www.youtube.com/watch?v=csOGIU72jGM&t=3s&ab_channel=ChispaMotivationEspa%C3%B1ol" target="_blank" rel="noopener noreferrer"></a>
-              </button>
+                Ver Video
+              </a>
             </div>
 
             {quote && quote.text && (
