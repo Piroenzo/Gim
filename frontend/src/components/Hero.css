@@ -5,9 +5,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--white);
+  color: var(--text-color);
   overflow: hidden;
   padding-top: 80px;
+  background-color:   #ECF0F1;
 }
 
 .hero-background {
@@ -16,9 +17,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background-size: cover;
-  background-position: center;
+  background: var(--neutral-color);
   z-index: -2;
 }
 
@@ -29,9 +28,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23FF6B35" stop-opacity="0.8"/><stop offset="100%" stop-color="%23FF6B35" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>') no-repeat;
+  background: radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 30%, rgba(118, 75, 162, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 40% 70%, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
   background-size: cover;
-  opacity: 0.3;
+  opacity: 0.6;
   z-index: -1;
 }
 
@@ -41,7 +42,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(44, 62, 80, 0.7);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
   z-index: -1;
 }
 
@@ -61,7 +62,8 @@
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 30px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: var(--secondary-color);
+  text-shadow: none;
 }
 
 .hero-description {
@@ -71,7 +73,8 @@
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0.95;
+  color: var(--text-color);
+  text-shadow: none;
 }
 
 .hero-actions {
@@ -88,11 +91,12 @@
 }
 
 .hero-quote {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: var(--white);
+  backdrop-filter: none;
   padding: 30px;
   border-radius: var(--border-radius);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: none;
+  box-shadow: var(--shadow);
   max-width: 600px;
   margin: 0 auto;
   margin-bottom: 40px;
@@ -101,6 +105,7 @@
 .quote-icon {
   font-size: 2rem;
   margin-bottom: 15px;
+  color: var(--primary-color);
 }
 
 .hero-quote blockquote {
@@ -108,11 +113,12 @@
   font-style: italic;
   margin-bottom: 15px;
   line-height: 1.5;
+  color: var(--text-color);
 }
 
 .hero-quote cite {
   font-size: 1rem;
-  opacity: 0.8;
+  color: var(--light-text);
 }
 
 .hero-stats {
@@ -126,16 +132,17 @@
 .stat-item {
   text-align: center;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: var(--white);
+  backdrop-filter: none;
   border-radius: var(--border-radius);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: none;
+  box-shadow: var(--shadow);
   transition: var(--transition);
 }
 
 .stat-item:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.15);
+  box-shadow: var(--shadow-hover);
 }
 
 .stat-number {
@@ -143,13 +150,13 @@
   font-weight: 800;
   color: var(--primary-color);
   margin-bottom: 10px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
 }
 
 .stat-label {
   font-size: 1rem;
   font-weight: 500;
-  opacity: 0.9;
+  color: var(--text-color);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -161,7 +168,7 @@
   transform: translateX(-50%);
   background: none;
   border: none;
-  color: var(--white);
+  color: var(--secondary-color);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -193,6 +200,8 @@
     transform: translateY(-5px);
   }
 }
+
+
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
