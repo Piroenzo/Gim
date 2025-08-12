@@ -40,7 +40,7 @@ const Hero = ({ quote }) => {
               
               <button className="btn btn-secondary btn-large">
                 <FaPlay className="play-icon" />
-                Ver Video
+                Ver Video<a href="https://www.youtube.com/watch?v=csOGIU72jGM&t=3s&ab_channel=ChispaMotivationEspa%C3%B1ol" target="_blank" rel="noopener noreferrer"></a>
               </button>
             </div>
 

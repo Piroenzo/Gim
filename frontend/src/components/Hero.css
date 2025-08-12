@@ -5,10 +5,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--white);
+  color: white;
   overflow: hidden;
   padding-top: 80px;
-  background: #667eea;
+  background: #667eea !important;
 }
 
 .hero-background {
@@ -17,11 +17,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #667eea;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background: -webkit-linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background: -moz-linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background: -o-linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #667eea !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  background: -webkit-linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  background: -moz-linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  background: -o-linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
   background-size: cover;
   background-position: center;
   z-index: -2;
@@ -48,7 +48,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(44, 62, 80, 0.7);
+  background: rgba(44, 62, 80, 0.3) !important;
   z-index: -1;
 }
 
@@ -199,6 +199,27 @@
   60% {
     transform: translateY(-5px);
   }
+}
+
+/* Fondo de respaldo adicional */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #667eea !important;
+  z-index: -3;
+}
+
+/* Respaldo para el body */
+body {
+  background: #667eea !important;
+}
+
+html {
+  background: #667eea !important;
 }
 
 /* Estilos responsivos */
